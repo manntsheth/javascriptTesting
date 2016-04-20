@@ -5,7 +5,8 @@
 
     function expenseDataService($http) {
         var service = {
-            getExpenses: getExpenses
+            getExpenses: getExpenses,
+            persistExpenses: persistExpenses
         };
 
         return service;
@@ -16,20 +17,31 @@
                 new ExpenseItem('Lunch', 'At airport', 15.40),
                 new ExpenseItem('Coffee', 'Starbucks', 4.93)
 
-                /*{
-    title: 'Taxi',
-    description: 'To airport',
-    amount: 89.95
-}, {
-    title: 'Lunch',
-    description: 'At airport',
-    amount: 15.40
-}, {
-    title: 'Coffee',
-    description: 'Starbucks',
-    amount: 4.93
-}*/
+                                /*{
+                    title: 'Taxi',
+                    description: 'To airport',
+                    amount: 89.95
+                }, {
+                    title: 'Lunch',
+                    description: 'At airport',
+                    amount: 15.40
+                }, {
+                    title: 'Coffee',
+                    description: 'Starbucks',
+                    amount: 4.93
+                }*/
                 ];
+        } //getExpenses ends
+
+        function reportExpenses() {
+
+        }
+
+        function persistExpenses(reportExpenses) {
+            var success = true;
+            if (success) {
+                reportExpenses();
+            }
         }
     }
 })();
