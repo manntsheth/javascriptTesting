@@ -9,4 +9,19 @@ describe('persisting expenses', function () {
             expect(spyCallBack).toHaveBeenCalled();
         }));
     });
+
+
+    describe('spy on', function () {
+        it('should spy on persistExpenses', inject(function (expenseDataService) {
+            expenseDataService.persistExpenses();
+            expect(spy).toHaveBeenCalled();
+        }));
+        it('should spy on persistExpenses and fake a reply', inject(function (expenseDataService) {
+            var spy = spyOn(expenseDataService, 'persistExpenses').and.callFake(function () {
+                return 3;
+            });
+            var numRecordsPersisted = expenseDataService.persistExpenses();
+            expect(numRecordsPersisted).toEqual(3);
+        }));
+    });
 });

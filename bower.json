@@ -1,0 +1,25 @@
+{
+  "name": "javascripttesting",
+  "homepage": "https://github.com/manntsheth/javascriptTesting",
+  "authors": [
+    "manan <manntsheth@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/frontEndApp/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "^1.5.3",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3"
+  }
+}
